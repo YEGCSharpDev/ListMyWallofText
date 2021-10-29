@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListMyWallofText", "ListMyWallofText\ListMyWallofText.csproj", "{B0C9437C-9D44-4963-B7E0-6DAFB37B604B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0C9437C-9D44-4963-B7E0-6DAFB37B604B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C9437C-9D44-4963-B7E0-6DAFB37B604B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C9437C-9D44-4963-B7E0-6DAFB37B604B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C9437C-9D44-4963-B7E0-6DAFB37B604B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60F417E3-9661-40EB-9826-F46321367AC7}
+	EndGlobalSection
+EndGlobal
