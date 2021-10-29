@@ -6,7 +6,7 @@ namespace ListMyWallofText
 {
     class Program
     {
-        static TelegramBotClient myBot = new TelegramBotClient("<BotAPIKeyHere");
+        static TelegramBotClient myBot = new TelegramBotClient("<BotAPIKeyHere>");
 
         
         static void Main()
