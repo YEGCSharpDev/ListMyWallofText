@@ -1,0 +1,16 @@
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\ListMyWallofText.exe.config
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\ListMyWallofText.exe
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\ListMyWallofText.pdb
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\Newtonsoft.Json.dll
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\Telegram.Bot.dll
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\Newtonsoft.Json.xml
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\bin\Release\Telegram.Bot.xml
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\obj\Release\ListMyWallofText.csproj.CoreCompileInputs.cache
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\obj\Release\ListMyWallofText.csproj.CopyComplete
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\obj\Release\ListMyWallofText.exe
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\obj\Release\ListMyWallofText.pdb
+D:\GIT\ListMyWallofText\ListMyWallofText\ListMyWallofText\obj\Release\ListMyWallofText.csproj.AssemblyReference.cache

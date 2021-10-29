@@ -1,14 +1,15 @@
 ﻿using System;
 using Telegram.Bot;
+using Telegram.Bot.Args;
 
 namespace ListMyWallofText
 {
     class Program
     {
-        static TelegramBotClient myBot = new TelegramBotClient("2060115352:AAEYFswD_xX1e5zTUX0ByePJgXpcKTWtKsY");
+        static TelegramBotClient myBot = new TelegramBotClient("<BotAPIKeyHere");
 
         
-        static void Main(string[] args)
+        static void Main()
         {
                 myBot.StartReceiving();
                 myBot.OnMessage += Bot_OnMessage;
@@ -16,7 +17,7 @@ namespace ListMyWallofText
             Console.ReadLine();
         }
 
-        private static void Bot_OnMessage(object test, Telegram.Bot.Args.MessageEventArgs e)
+        private static void Bot_OnMessage(object test, MessageEventArgs e)
         {
             try
             {
@@ -29,33 +30,66 @@ namespace ListMyWallofText
 
                 else
                 {
-                    var messagetext = e.Message.Text;
-                    var stringholder = string.Empty;
-                    char[] splitter = new[] { '\n' };
-                    string[] stringlist = messagetext.Split(splitter, StringSplitOptions.RemoveEmptyEntries);
-
-                
-
-                    if (stringlist.Length >= 0)
-                    {
-                        for (var i = 0; i <= (stringlist.Length - 1); i++)
-                        {
-                            myBot.SendTextMessageAsync(e.Message.Chat.Id, stringlist[i]);
-                         }
-                    }
-
-
+                    HandleMessageResponse(e);
 
                 }
             }
 
             catch (Exception)
             {
-                throw ;
+                throw;
 
             }
             
 
+        }
+        /// <summary>
+        /// Take the Text Message and handle it as required.
+        /// </summary>
+        /// <param name="e"></param>
+        private static void HandleMessageResponse(MessageEventArgs e)
+        {
+            var messagetext = e.Message.Text;
+
+            if (messagetext == "/start")
+            {
+                SendStartResponse(e);
+                Console.WriteLine("Start Response Received.");
+            }
+            else
+            {
+                SendListReponse(e, messagetext);
+                Console.WriteLine("Response Sent.");
+            }
+        }
+        /// <summary>
+        /// Splits the message received into a string array and sends them all back.
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="messagetext"></param>
+        private static void SendListReponse(MessageEventArgs e, string messagetext)
+        {
+            char[] splitter = new[] { '\n' };
+            string[] stringlist = messagetext.Split(splitter, StringSplitOptions.RemoveEmptyEntries);
+
+            if (stringlist.Length >= 0)
+            {
+                for (var i = 0; i <= (stringlist.Length - 1); i++)
+                {
+                    myBot.SendTextMessageAsync(e.Message.Chat.Id, stringlist[i]);
+                }
+            }
+        }
+        /// <summary>
+        /// Sends out the first response a user gets
+        /// </summary>
+        /// <param name="e"></param>
+        private static void SendStartResponse(MessageEventArgs e)
+        {
+            var send_start_response = $@"Hi {e.Message.Chat.FirstName}!, I take your sentences in a message, split them into individual messages and send them back to you. 
+                        Source code for this bot is hosted at https://github.com/YEGCSharpDev/ListMyWallofText";
+
+            myBot.SendTextMessageAsync(e.Message.Chat.Id, send_start_response);
         }
     }
 }
