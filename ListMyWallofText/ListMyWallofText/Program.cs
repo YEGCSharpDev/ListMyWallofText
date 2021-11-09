@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using Telegram.Bot;
 using Telegram.Bot.Args;
 
@@ -6,9 +7,9 @@ namespace ListMyWallofText
 {
     class Program
     {
-        static TelegramBotClient myBot = new TelegramBotClient("<BotAPIKeyHere>");
+        private static TelegramBotClient myBot = new TelegramBotClient(ConfigurationManager.AppSettings.Get("ApiKey"));
 
-        
+
         static void Main()
         {
                 myBot.StartReceiving();
